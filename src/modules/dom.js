@@ -1,4 +1,5 @@
 const buttonSelectors = document.querySelectorAll(".lista-botones button");
+const submitButtonSelector = document.querySelector(".boton-submit");
 
 function removeAllSelectedButtons() {
   buttonSelectors.forEach(button => {
