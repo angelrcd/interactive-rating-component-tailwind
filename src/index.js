@@ -12,13 +12,14 @@ function changeCurrentPuntuation(puntuation) {
 
 function changeCardContent(puntuation) {
   imageSelector.src = "/images/illustration-thank-you.svg";
+  imageSelector.classList.add("object-contain", "w-48", "h-36", "self-center");
   cardContainer.innerHTML =
   `
-  <img src="/images/illustration-thank-you.svg" alt="icono estrella" class="object-contain w-48 h-36 self-center">
       <p class="text-orange-500 w-3/5 rounded-full text-center bg-gray-700 self-center">You selected ${currentPuntuation} out of 5</p>
       <h1 class="text-white text-3xl text-center">Than you for your rating!
       </h1>
   `;
+  cardContainer.insertAdjacentElement("afterbegin", imageSelector);
 }
 
 buttonSelectors.forEach((button, index) => {
