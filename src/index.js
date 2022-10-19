@@ -3,6 +3,7 @@ let currentPuntuation = 0;
 const buttonSelectors = document.querySelectorAll(".lista-botones button");
 const submitButtonSelector = document.querySelector(".boton-submit");
 const cardContainer = document.querySelector(".container");
+const imageSelector = document.querySelector("img");
 
 function changeCurrentPuntuation(puntuation) {
   currentPuntuation = puntuation;
@@ -10,6 +11,7 @@ function changeCurrentPuntuation(puntuation) {
 }
 
 function changeCardContent(puntuation) {
+  imageSelector.src = "/images/illustration-thank-you.svg";
   cardContainer.innerHTML =
   `
   <img src="/images/illustration-thank-you.svg" alt="icono estrella" class="object-contain w-48 h-36 self-center">
